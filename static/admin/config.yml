@@ -1,0 +1,94 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/thinktank-site
+  branch: main
+
+i18n:
+  structure: multiple_folders
+  locales: [en, ar]
+  default_locale: en
+
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: research
+    label: "Research"
+    folder: content/research
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", i18n: true }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["Governance", "Economy", "Foreign Policy", "Education", "Health", "Environment", "Technology"]
+      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  - name: news
+    label: "News"
+    folder: content/news
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", i18n: true }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["Press Release", "Event", "Announcement", "Opinion", "Interview"]
+      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  - name: reports
+    label: "Reports"
+    folder: content/reports
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", i18n: true }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "PDF File", name: "pdf", widget: "file", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["Annual Report", "Policy Brief", "Working Paper", "White Paper", "Case Study"]
+      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  - name: videos
+    label: "Videos"
+    folder: content/videos
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "text", i18n: true }
+      - { label: "YouTube URL", name: "youtube_url", widget: "string" }
+      - { label: "Thumbnail", name: "image", widget: "image", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["Webinar", "Panel Discussion", "Interview", "Lecture", "Documentary"]
+      - { label: "Tags", name: "tags", widget: "list", i18n: true }
+      - { label: "Description", name: "body", widget: "markdown", i18n: true }
