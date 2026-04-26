@@ -1,0 +1,74 @@
+baseURL = "/"
+title = "Think Tank"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+paginate = 10
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageDirection = "ltr"
+    weight = 1
+    title = "Think Tank — Policy Research & Analysis"
+    [languages.en.params]
+      description = "Independent research and policy analysis"
+
+  [languages.ar]
+    languageName = "العربية"
+    languageDirection = "rtl"
+    weight = 2
+    title = "مركز الأبحاث — بحوث وتحليل السياسات"
+    [languages.ar.params]
+      description = "بحوث مستقلة وتحليل سياسات للتنمية الوطنية"
+
+[[languages.en.menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[languages.en.menus.main]]
+  name = "Research"
+  url = "/research/"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "News"
+  url = "/news/"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "Reports"
+  url = "/reports/"
+  weight = 4
+[[languages.en.menus.main]]
+  name = "Videos"
+  url = "/videos/"
+  weight = 5
+
+[[languages.ar.menus.main]]
+  name = "الرئيسية"
+  url = "/"
+  weight = 1
+[[languages.ar.menus.main]]
+  name = "الأبحاث"
+  url = "/research/"
+  weight = 2
+[[languages.ar.menus.main]]
+  name = "الأخبار"
+  url = "/news/"
+  weight = 3
+[[languages.ar.menus.main]]
+  name = "التقارير"
+  url = "/reports/"
+  weight = 4
+[[languages.ar.menus.main]]
+  name = "الفيديو"
+  url = "/videos/"
+  weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
