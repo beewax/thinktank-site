@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: YOUR_ACTUAL_USERNAME/bannaga@gmail.com
   branch: main
 
 i18n:
