@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/thinktank-site
+  repo: YOUR_GITHUB_USERNAME/bannaga@gmail.com
   branch: main
 
 i18n:
